@@ -1,0 +1,154 @@
+ body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+body {
+    margin: 0;
+    align-items: center;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    color: inherit;
+    text-decoration: underline;
+    transition: 0.25s ease-in-out opacity;
+    text-decoration: none;
+  }
+
+  @media (min-width: 1024px) {
+    a:hover {
+      opacity: 0.6;
+    }
+  }
+
+  img {
+    border-style: none;
+  }
+img {
+    align-items: center;
+    text-align: center;
+    left: 50%;
+}
+
+  @media (max-width: 700px) {
+    header {
+        padding: 12px var(--side-padding-s) 12px 15px;
+        font-size: 14px;
+    }
+}
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1;
+    padding: 17px var(--side-padding-s) 17px 15px;
+    background-color: transparent;
+    z-index: 10;
+    font-size: 12px;
+    unicode-bidi: isolate;
+    flex-direction: column;
+    background-color: white;
+  }
+
+  header .logo img {
+    max-width: 300px;
+    align-items: center;
+ 
+  }
+  header .menu ul {
+    display: flex;
+    gap: 11px;
+  }
+  
+  header .menu ul li a.active {
+    opacity: 0.6;
+  }
+
+  ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    unicode-bidi: isolate;
+    color:#b0bfb6;
+  }
+
+/* 슬라이더의 전체 컨테이너 */
+.slider {
+    position: relative;   /* 부모 요소에 상대적 위치 부여 */
+    width: 100%;
+    max-width: 600px;   /* 최대 너비 100%로 설정 */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* 슬라이드 이미지들을 가로로 배치 */
+.slider-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin-top: 200px;
+}
+
+.slider-images img {
+    width: 100%;    /* 이미지가 부모의 너비에 맞게 채워지도록 설정 */
+    max-width: 600px;  /* 이미지의 비율을 유지하며 높이를 자동으로 조정 */
+}
+/* 동그라미 버튼 스타일 */
+.dots {
+    position: absolute;
+    bottom: 380px;  /* 이미지 하단에서 20px 떨어진 위치에 배치 */
+    left: 50%;
+    transform: translateX(-50%);  /* 가운데 정렬 */
+    display: flex;
+    justify-content: center;
+    z-index: 200%;  /* 이미지 위에 표시되도록 설정 */
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #b0bfb6;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot:hover {
+    background-color: #ceded4;
+}
+
+.dot.active {
+    background-color: #78857d;
+}
